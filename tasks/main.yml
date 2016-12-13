@@ -1,0 +1,10 @@
+# copied from roles/geerlingguy.adminer/tasks/main.yml#L23
+- name: Set the proper Apache configuration directory (Debian).
+  set_fact:
+    apache_extra_conf_dir: "{{ 'conf-enabled' if apache_vhosts_version == '2.4' else 'conf.d' }}"
+
+- name: Add Apache configuration file for Adminer.
+  template:
+    src: adminer.conf.j2
+    dest: "{{ apache_conf_path }}/{{ apache_extra_conf_dir }}/adminer.conf"
+  notify: restart apache

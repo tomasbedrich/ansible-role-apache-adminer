@@ -1,0 +1,22 @@
+---
+dependencies:
+  - geerlingguy.apache
+  - geerlingguy.adminer
+
+galaxy_info:
+  author: Tomáš Bedřich
+  description: Apache Adminer config
+  company: tbedrich.cz
+
+  license: MIT
+  min_ansible_version: 1.6
+
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+
+  galaxy_tags: []
