@@ -12,6 +12,9 @@ galaxy_info:
   min_ansible_version: 1.6
 
   platforms:
+  - name: EL
+    versions:
+    - all
   - name: Ubuntu
     versions:
     - all
